@@ -12,11 +12,13 @@ git config --list
 5. git branch -M main
 // Pertama kali inisiasi project di git
 6. git push -u origin main
+7. git pull
+// Untuk tarik data
+8. git push --set-upstream origin main
 
-git pull
 
-git push --set-upstream origin main
 
+// Catatan dari Mas Arif
 git config --list
 git config --global --list
 git status
