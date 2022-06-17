@@ -10,5 +10,9 @@ class Driver {
         // bentuk 3 (interface)
 		AktivitasPagi a11 = new AnakUmur1Tahun();
 		a11.hobiAnak();
+
+        // Notes: AnakUmur1Tahun merupakan child node
+        // Induk merupakan parent node
+        // AnakUmur1Tahun bisa mengambil kelas/fungsi yang ada di Induk
     }
 }

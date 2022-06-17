@@ -1,12 +1,12 @@
 public class Induk {
-	public String namaAnak = "Rio";
-	public String hobiAnak = "Makan";
+	public String namaAnak = "Cedric";
+	public String hobiAnak = "Menyanyi";
 
 	public void makan() {
-		System.out.println("Lagi makan sate");
+		System.out.println("Lagi makan hati");
 	}
 
 	public void minum() {
-		System.out.println("Lagi minum kopi");
+		System.out.println("Lagi minum air mata");
 	}
 }

@@ -1,14 +1,13 @@
 public class AnakUmur1Tahun extends Induk implements AktivitasPagi {
-
 	@Override
 	public void anakSiapa() {
-		// TODO Auto-generated method stub
+		// Method override dan penggunaan interface
 		System.out.println("Nama anaknya adalah : " + namaAnak);
 	}
 
 	@Override
 	public void hobiAnak() {
-		// TODO Auto-generated method stub
+		// Method override dan penggunaan interface
 		System.out.println("Hobi anaknya adalah : " + hobiAnak);
 	}
 
