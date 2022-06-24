@@ -1,0 +1,288 @@
+History Query (Biar gak lupa)
+
+use dinoDB
+'switched to db dinoDB'
+
+show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+
+db.createCollection("profile");
+{ ok: 1 }
+
+db.profile.insertOne({name: "t-rex", color: "red"});
+{ acknowledged: true,
+  insertedId: ObjectId("62b2794c725187b0a17e7f18") }
+
+db.profile.insertMany([{name: "tricera"}, {name: "brachio"}]);
+{ acknowledged: true,
+  insertedIds: 
+   { '0': ObjectId("62b27a06725187b0a17e7f19"),
+     '1': ObjectId("62b27a06725187b0a17e7f1a") } }
+
+db.profile.find()
+{ _id: ObjectId("62b2794c725187b0a17e7f18"),
+  name: 't-rex',
+  color: 'red' }
+{ _id: ObjectId("62b27a06725187b0a17e7f19"), name: 'tricera' }
+{ _id: ObjectId("62b27a06725187b0a17e7f1a"), name: 'brachio' }
+
+db.profile.find({name: "t-rex"});
+{ _id: ObjectId("62b2794c725187b0a17e7f18"),
+  name: 't-rex',
+  color: 'red' }
+
+db.profile.updateOne({color: "red"}, {$set: {name: "allo"}})
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+
+db.profile.find()
+{ _id: ObjectId("62b2794c725187b0a17e7f18"),
+  name: 'allo',
+  color: 'red' }
+{ _id: ObjectId("62b27a06725187b0a17e7f19"), name: 'tricera' }
+{ _id: ObjectId("62b27a06725187b0a17e7f1a"), name: 'brachio' }
+
+db.profile.deleteOne({name: "brachio"});
+{ acknowledged: true, deletedCount: 1 }
+
+db.profile.find()
+{ _id: ObjectId("62b2794c725187b0a17e7f18"),
+  name: 'allo',
+  color: 'red' }
+{ _id: ObjectId("62b27a06725187b0a17e7f19"), name: 'tricera' }
+
+-- Database Rumah Sakit --
+use rumah_sakit;
+'switched to db rumah_sakit'
+
+db.createCollection("tabel_pasien")
+{ ok: 1 }
+
+db.createCollection("tabel_penyakit")
+{ ok: 1 }
+
+db.tabel_pasien.insertOne({nama: "Foxy", umur: 20, penyakit: "sakit_0001"})
+{ acknowledged: true,
+  insertedId: ObjectId("62b27cb8725187b0a17e7f1b") }
+
+db.tabel_penyakit.insertOne({_id: "sakit_0001", penyakit: "flu"})
+{ acknowledged: true, insertedId: 'sakit_0001' }
+
+var penyakit_id = db.tabel_pasien.findOne().penyakit
+
+db.tabel_penyakit.findOne({_id: penyakit_id})
+{ _id: 'sakit_0001', penyakit: 'flu' }
+
+-- Database Transaksi Nama --
+
+use transaksi_nama;
+'switched to db transaksi_nama'
+
+db.createCollection("tabel_pelanggan")
+{ ok: 1 }
+
+db.createCollection("tabel_transaksi")
+{ ok: 1 }
+
+db.tabel_pelanggan.insertOne({_id: "PL0001", nama_pelanggan: "Brudi"})
+{ acknowledged: true, insertedId: 'PL0001' }
+
+db.tabel_pelanggan.insertOne({_id: "PL0002", nama_pelanggan: "Brandi"}, {_id: "PL0003", nama_pelanggan: "Brondi"})
+{ acknowledged: true, insertedId: 'PL0002' }
+
+db.tabel_transaksi.insertOne({_id: "TR0001", tanggal_transaksi: "2022-06-13", total_harga: 100000, id_pelanggan: "PL0001"})
+{ acknowledged: true, insertedId: 'TR0001' }
+
+db.tabel_transaksi.insertOne({_id: "TR0002", tanggal_transaksi: "2022-06-13", total_harga: 150000, id_pelanggan: "PL0002"})
+{ acknowledged: true, insertedId: 'TR0002' }
+
+db.tabel_transaksi.insertOne({_id: "TR0003", tanggal_transaksi: "2022-06-13", total_harga: 250000, id_pelanggan: "PL0003"})
+{ acknowledged: true, insertedId: 'TR0003' }
+
+db.tabel_transaksi.find().pretty()
+{ _id: 'TR0001',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 100000,
+  id_pelanggan: 'PL0001' }
+{ _id: 'TR0002',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 150000,
+  id_pelanggan: 'PL0002' }
+{ _id: 'TR0003',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0003' }
+
+db.tabel_transaksi.insertOne({_id: "TR0004", tanggal_transaksi: "2022-06-13", total_harga: 250000, id_pelanggan: "PL0001"})
+{ acknowledged: true, insertedId: 'TR0004' }
+
+db.tabel_transaksi.insertOne({_id: "TR0005", tanggal_transaksi: "2022-06-13", total_harga: 350000, id_pelanggan: "PL0001"})
+{ acknowledged: true, insertedId: 'TR0005' }
+
+db.tabel_transaksi.find().pretty()
+{ _id: 'TR0001',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 100000,
+  id_pelanggan: 'PL0001' }
+{ _id: 'TR0002',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 150000,
+  id_pelanggan: 'PL0002' }
+{ _id: 'TR0003',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0003' }
+{ _id: 'TR0004',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0001' }
+{ _id: 'TR0005',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 350000,
+  id_pelanggan: 'PL0001' }
+
+db.createCollection("detail_transaksi")
+{ ok: 1 }
+
+db.detail_transaksi.insertOne({no_trans: "TR0001", barang: "Gelas", jumlah: 3})
+{ acknowledged: true,
+  insertedId: ObjectId("62b2a1fe725187b0a17e7f1c") }
+
+db.detail_transaksi.insertOne({no_trans: "TR0001", barang: "Piring", jumlah: 5})
+{ acknowledged: true,
+  insertedId: ObjectId("62b2a218725187b0a17e7f1d") }
+
+db.detail_transaksi.insertOne({no_trans: "TR0001", barang: "Sendok", jumlah: 5})
+{ acknowledged: true,
+  insertedId: ObjectId("62b2a21f725187b0a17e7f1e") }
+
+db.tabel_transaksi.aggregate({$lookup: {from: "detail_transaksi", localField: "_id", foreignField: "no_trans", as: "detail"}})
+{ _id: 'TR0001',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 100000,
+  id_pelanggan: 'PL0001',
+  detail: 
+   [ { _id: ObjectId("62b2a1fe725187b0a17e7f1c"),
+       no_trans: 'TR0001',
+       barang: 'Gelas',
+       jumlah: 3 },
+     { _id: ObjectId("62b2a218725187b0a17e7f1d"),
+       no_trans: 'TR0001',
+       barang: 'Piring',
+       jumlah: 5 },
+     { _id: ObjectId("62b2a21f725187b0a17e7f1e"),
+       no_trans: 'TR0001',
+       barang: 'Sendok',
+       jumlah: 5 } ] }
+{ _id: 'TR0002',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 150000,
+  id_pelanggan: 'PL0002',
+  detail: [] }
+{ _id: 'TR0003',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0003',
+  detail: [] }
+{ _id: 'TR0004',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0001',
+  detail: [] }
+{ _id: 'TR0005',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 350000,
+  id_pelanggan: 'PL0001',
+  detail: [] }
+
+db.tabel_transaksi.aggregate([{$lookup: {from: "detail_transaksi", localField: "_id", foreignField: "no_trans", as: "join"}}, {$lookup: {from: "tabel_pelanggan", localField: "id_pelanggan", foreignField: "_id", as: "customer"}}])
+{ _id: 'TR0001',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 100000,
+  id_pelanggan: 'PL0001',
+  join: 
+   [ { _id: ObjectId("62b2a1fe725187b0a17e7f1c"),
+       no_trans: 'TR0001',
+       barang: 'Gelas',
+       jumlah: 3 },
+     { _id: ObjectId("62b2a218725187b0a17e7f1d"),
+       no_trans: 'TR0001',
+       barang: 'Piring',
+       jumlah: 5 },
+     { _id: ObjectId("62b2a21f725187b0a17e7f1e"),
+       no_trans: 'TR0001',
+       barang: 'Sendok',
+       jumlah: 5 } ],
+  customer: [ { _id: 'PL0001', nama_pelanggan: 'Brudi' } ] }
+{ _id: 'TR0002',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 150000,
+  id_pelanggan: 'PL0002',
+  join: [],
+  customer: [ { _id: 'PL0002', nama_pelanggan: 'Brandi' } ] }
+{ _id: 'TR0003',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0003',
+  join: [],
+  customer: [] }
+{ _id: 'TR0004',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 250000,
+  id_pelanggan: 'PL0001',
+  join: [],
+  customer: [ { _id: 'PL0001', nama_pelanggan: 'Brudi' } ] }
+{ _id: 'TR0005',
+  tanggal_transaksi: '2022-06-13',
+  total_harga: 350000,
+  id_pelanggan: 'PL0001',
+  join: [],
+  customer: [ { _id: 'PL0001', nama_pelanggan: 'Brudi' } ] }
+
+-- Database Barang --
+Yang ini gak bisa untuk validator
+db.createCollection("barang", {
+  validator: {
+    $jsonSchema: {
+      bsonType : “object”,
+      Required : [“namabarang”, “hargabarang”, “jenisbarang”, “description”],
+      properties : {
+        namaBarang : {
+          bsonType : “string”
+          Description : “Nama Barang harus berupa karakter dan tidak boleh kosong!"
+        },
+        hargaBarang : {
+          bsonType : “number”
+          Description : “Harga Barang harus berupa number dan tidak boleh kosong!”
+        },
+        jenisBarang : {
+          bsonType : “objectId”
+          Description : “Jenis Barang harus berupa objectID dan tidak boleh kosong!”
+        },
+        description : {
+          bsonType : “object”
+          Description : “Deskripsi harus berupa karakter dan tidak boleh kosong!”
+          Items : {
+            Merk : {
+              bsonType : “string”
+              description : “Ukuran harus berupa karakter dan tidak boleh kosong!”
+            }
+            ukuran : {
+              bsonType : “string”
+              description : “Ukuran harus berupa karakter dan tidak boleh kosong!”
+            }
+            stok : {
+              bsonType :”number”
+              description : “Stok harus berupa angka dan tidak boleh kosong!”
+            }
+          }
+        }
+      }
+    }
+  }
+})

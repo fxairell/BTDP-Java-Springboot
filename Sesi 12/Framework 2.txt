@@ -1,0 +1,38 @@
+employee:
+- SSN
+- FName
+- MName
+- LName
+- Bdate
+- Adress
+- Sex
+- Salary
+- Dnum
+
+department:
+- Dnumber
+- Dname
+- MgrSSN
+- MgrStartDate
+
+dept_location:
+- Dnum
+- Dlocation
+
+project:
+- Pnumber
+- Pname
+- Plocation
+- Dnum
+
+works_on:
+- ESSN
+- PNo
+- Hours
+
+dependent:
+- ESSN
+- Dependent_Name
+- Sex
+- Bdate
+- Relationship

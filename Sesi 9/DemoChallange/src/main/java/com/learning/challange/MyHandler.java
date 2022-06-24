@@ -15,7 +15,7 @@ public class MyHandler extends DefaultHandler {
     private boolean bfn = false;
     private boolean bln = false;
 
-    // @Override
+    @Override
     public void startElement (String url, String localName,
             String qName, Attributes attributes) throws SAXException {
         
@@ -27,16 +27,16 @@ public class MyHandler extends DefaultHandler {
         }
 
         switch (qName) {
-            case "first name":
+            case "firstname":
                 bfn = true;
                 break;
-            case "last name":
+            case "lastname":
                 bln = true;
                 break;
         }
     }
 
-    // @Override
+    @Override
     public void characters (char[] ch, int start, int length) throws SAXException {
         if (bfn) {
             user.setFirstName(new String(ch, start, length));
@@ -48,7 +48,7 @@ public class MyHandler extends DefaultHandler {
         }
     }
 
-    // @Override
+    @Override
     public void endElement (String url, String localName,
             String qName) throws SAXException {
         

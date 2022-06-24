@@ -5,7 +5,7 @@ import java.util.List;
 public class JavaReadXmlChallange {
     public static void main(String[] args) {
         MyRunner runner = new MyRunner();
-        List<Challange> lines = runner.parseUsers();
+        List<User> lines = runner.parseUsers();
 
         lines.forEach(System.out::print);
     }

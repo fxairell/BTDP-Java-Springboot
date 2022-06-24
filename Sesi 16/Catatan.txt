@@ -1,0 +1,28 @@
+Latihan
+
+Buat Project -> Spring Boot -> Starter Project
+Depedency :
+- Spring Web
+- Spring Dev Tool
+- JPA
+- ThymeLeaf
+- Lombok
+- MySQL
+- Flyway
+- Thyme Spring Data Dialect
+
+Run As -> Dashboard -> Running
+Klik kanan -> Open browser
+
+Alih-alih kalau pom.xml gak kebaca
+<profiles>
+		<profile>
+			<id>pom.xml</id>
+		</profile>
+	</profiles>
+
+Pake create terus clean terus install
+Delete table, ganti update
+Terus install, jangan di clean
+
+Generator uuid2, itu akan ditampilkan pas di web service

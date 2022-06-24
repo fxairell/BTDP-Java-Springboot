@@ -1,0 +1,118 @@
+Histori Query (biar gak lupa)
+
+INSERT INTO tabel_instrument (ID_Instrument, Nama, Kunci) VALUES
+('001', 'Guitar', 'A'), ('002', 'Guitar', 'C'),
+('003', 'Bass', 'D'), ('004', 'Bass', 'F'),
+('005', 'Piano', 'A'), ('006', 'Piano', 'B'),
+('007', 'Piano', 'C'), ('008', 'Piano', 'D'),
+('009', 'Piano', 'E'), ('010', 'Piano', 'F'),
+('011', 'Piano', 'G'),
+('012', 'Digital Sound', ''),
+('013', 'Drum', ''),
+('014', 'Saxophone', 'D'),
+('015', 'Flute', 'E');
+
+INSERT INTO tabel_musisi (ID_Musisi, Nama, NIK, Alamat, No_Telepon) VALUES
+('001', 'Olivia Hye', '12345', 'Eden', '6212345'),
+('002', 'Chuu', '12346', 'Eden', '6212346'),
+('003', 'Gowon', '12347', 'Eden', '6212347'),
+('004', 'Yves', '12348', 'Eden', '6212348'),
+('005', 'Choerry', '12349', '', '6212349'),
+('006', 'Jinsoul', '12340', '', '6212340'),
+('007', 'Kim Lip', '12341', '', '6212341'),
+('008', 'Vivi', '12342', 'Korea', '6212342'),
+('009', 'Yeojin', '12343', 'Korea', '6212343'),
+('010', 'Haseul', '12344', 'Korea', '6212344'),
+('011', 'Hyunjin', '123455', 'Korea', '62123455'),
+('012', 'Heejin', '123456', 'Korea', '62123456');
+
+Many to Many
+INSERT INTO tabelc_musinst (ID_Musisi, ID_Instrument) VALUES
+('1', '1'), ('1', '2'),
+('4', '5'), ('4', '6'), ('4', '7'), ('4', '8'),
+('4', '9'), ('4', '10'), ('4', '11'), ('4', '5'),
+('5', '2'), ('5', '7'), ('5', '12'), ('12', '14');
+
+INSERT INTO tabel_album (ID_Album, Judul, Tanggal_Copyright, Format, Produser) VALUES
+('1', 'Love&Live', '2017-03-13', 'CD', '12'),
+('2', 'Girl Front', '2017-03-13', 'CD', '7'),
+('3', 'Love4Eva', '2017-09-21', 'CD', '4'),
+('4', '+ +', '2018-08-20', 'CD', '1'),
+('5', 'x x', '2019-02-19', 'CD', '2'),
+('6', '#', '2020-02-05', 'CD', '3'),
+('7', '12.00', '2020-10-19', 'CD', '4'),
+('8', '&', '2021-06-28', 'CD', '5'),
+('9', 'Flip That', '2022-06-20', 'CD', '6');
+
+INSERT INTO tabel_lagu (ID_Lagu, Judul, Album) VALUES
+('1', 'Love&Live', '1'), ('2', 'Sonatine', '1'),
+('3', 'Girl Front', '2'), ('4', 'Sweet Crazy Love', '2'),
+('5', 'Love4Eva', '3'),
+('6', 'Favourite', '4'), ('7', 'Hi High', '4'),
+('8', 'Butterfly', '5'), ('9', 'Satelite', '5'),
+('10', 'So What', '6'),
+('11', 'Why Not', '7'),
+('12', 'Paint The Town', '8'),
+('13', 'Flip That', '9');
+
+INSERT INTO `tabelc_lagumus` (`ID_Lagu`, `ID_Musisi`) VALUES
+('1', '12'), ('1', '11'), ('1', '10'), ('1', '8'),
+('2', '12'), ('2', '11'), ('2', '10'), ('2', '8'),
+('3', '7'), ('3', '6'), ('3', '5'),
+('4', '7'), ('4', '6'), ('4', '5'),
+('5', '1'), ('5', '2'), ('5', '3'), ('5', '4'),
+('6', '1'), ('6', '2'), ('6', '3'), ('6', '4'),
+('7', '1'), ('7', '2'), ('7', '3'), ('7', '4'), ('7', '5'), ('7', '6'),
+('7', '7'), ('7', '8'), ('7', '9'), ('7', '10'), ('7', '11'), ('7', '12'),
+('8', '1'), ('8', '2'), ('8', '3'), ('8', '4'), ('8', '5'), ('8', '6'),
+('8', '7'), ('8', '8'), ('8', '9'), ('8', '10'), ('8', '11'), ('8', '12'),
+('9', '1'), ('9', '2'), ('9', '3'), ('9', '4'), ('9', '5'), ('9', '6'),
+('9', '7'), ('9', '8'), ('9', '9'), ('9', '10'), ('9', '11'), ('9', '12'),
+('10', '1'), ('10', '2'), ('10', '3'), ('10', '4'), ('10', '5'), ('10', '6'),
+('10', '7'), ('10', '8'), ('10', '9'), ('10', '10'), ('10', '11'), ('10', '12'),
+('11', '1'), ('11', '2'), ('11', '3'), ('11', '4'), ('11', '5'), ('11', '6'),
+('11', '7'), ('11', '8'), ('11', '9'), ('11', '10'), ('11', '11'), ('11', '12'),
+('12', '1'), ('12', '2'), ('12', '3'), ('12', '4'), ('12', '5'), ('12', '6'),
+('12', '7'), ('12', '8'), ('12', '9'), ('12', '10'), ('12', '11'), ('12', '12'),
+('13', '1'), ('13', '2'), ('13', '3'), ('13', '4'), ('13', '5'), ('13', '6'),
+('13', '7'), ('13', '8'), ('13', '9'), ('13', '10'), ('13', '11'), ('13', '12');
+
+CREATE VIEW album_produser
+AS SELECT ID_Album, Judul, Tanggal_Copyright, Nama AS Produser
+FROM tabel_album a, tabel_musisi b
+WHERE a.Produser = b.ID_Musisi;
+
+CREATE VIEW album_lagu
+AS SELECT ID_Lagu, a.Judul, b.Judul AS Album
+FROM tabel_lagu a, tabel_album b
+WHERE a.Album = b.ID_Album;
+
+CREATE VIEW musisi_instrument
+AS SELECT a.Nama AS Musisi, b.Nama AS Instrument, Kunci
+FROM tabel_musisi a, tabel_instrument b, tabelc_musinst c
+WHERE c.ID_Musisi = a.ID_Musisi AND c.ID_Instrument = b.ID_Instrument;
+
+CREATE VIEW lagu_love&live
+AS SELECT Judul, Nama
+FROM tabel_lagu, tabel_musisi, tabelc_lagumus a
+WHERE a.ID_Lagu = '1';
+
+CREATE VIEW lagu_loveandlive
+AS SELECT Judul, Nama AS Musisi
+FROM tabelc_lagumus a, tabel_lagu b, tabel_musisi c
+WHERE a.ID_Lagu = 1 AND a.ID_Lagu = b.ID_Lagu AND a.ID_Musisi = c.ID_Musisi;
+
+CREATE VIEW lagu_girlfront
+AS SELECT Judul, Nama AS Musisi
+FROM tabelc_lagumus a, tabel_lagu b, tabel_musisi c
+WHERE a.ID_Lagu = 3 AND a.ID_Lagu = b.ID_Lagu AND a.ID_Musisi = c.ID_Musisi;
+
+CREATE VIEW lagu_love4eva
+AS SELECT Judul, Nama AS Musisi
+FROM tabelc_lagumus a, tabel_lagu b, tabel_musisi c
+WHERE a.ID_Lagu = 5 AND a.ID_Lagu = b.ID_Lagu AND a.ID_Musisi = c.ID_Musisi;
+
+CREATE VIEW lagu_butterfly
+AS SELECT Judul, Nama AS Musisi
+FROM tabelc_lagumus a, tabel_lagu b, tabel_musisi c
+WHERE a.ID_Lagu = 8 AND a.ID_Lagu = b.ID_Lagu AND a.ID_Musisi = c.ID_Musisi;

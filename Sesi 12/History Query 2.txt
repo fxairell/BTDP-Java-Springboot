@@ -1,0 +1,204 @@
+History Query (biar gak lupa)
+
+INSERT INTO department (Department_Number, Department_Name, Manager_Startdate) VALUES
+('1', 'Human Resource', '2021-06-13'),
+('2', 'Accounting', '2021-06-13'),
+('3', 'Information Care', '2021-06-13'),
+('4', 'Technology Development', '2021-06-13'),
+('5', 'Sales', '2021-06-13'),
+('6', 'Digital Marketing', '2021-06-13'),
+('7', 'Archive', '2021-06-13'),
+('8', 'Warehouse', '2021-06-13');
+
+INSERT INTO employee (SSN, First_Name, Middle_Name, Last_Name, Birthdate, Address, Sex, Salary, Department_Number) VALUES
+('1', 'Abigail', 'Bernanda', 'Cassie', '1999-01-01', 'Bekasi', 'Perempuan', '10000000', '1'),
+('2', 'Dino', 'Emanuel', 'Farhan', '1999-02-02', 'Jakarta', 'Laki-Laki', '15000000', '2'),
+('3', 'Greggory', 'Hamid', 'Ian', '1999-03-03', 'Bekasi', 'Laki-Laki', '10000000', '1'),
+('4', 'Justin', 'Korpel', 'Leno', '1999-04-04', 'Bekasi', 'Laki-Laki', '15000000', '3'),
+('5', 'Maria', 'Namida', 'Osial', '1999-05-05', 'Jakarta', 'Perempuan', '20000000', '5'),
+('6', 'Primmy', 'Queen', 'Regina', '1999-06-06', 'Bekasi', 'Perempuan', '20000000', '4'),
+('7', 'Starlight', 'Tia', 'Ursula', '1999-07-07', 'Bekasi', 'Perempuan', '10000000', '8'),
+('8', 'Vino', 'Westernlight', 'Xavier', '1999-08-08', 'Bekasi', 'Laki-Laki', '10000000', '8'),
+('9', 'Yugi', 'Zen', 'Andira', '1999-09-09', 'Jakarta', 'Laki-Laki', '10000000', '1'),
+('10', 'Bertrand', 'Chuck', 'Donn', '1999-10-10', 'Bekasi', 'Laki-Laki', '15000000', '7'),
+('11', 'Evanella', 'Fernanda', 'Gabriella', '1999-11-11', 'Bekasi', 'Perempuan', '10000000', '1'),
+('12', 'Hinata', 'Indira', 'Jackie', '1999-12-12', 'Jakarta', 'Perempuan', '20000000', '4'),
+('13', 'Kernel', 'Lossaga', 'Meen', '1999-01-02', 'Jakarta', 'Laki-Laki', '20000000', '5'),
+('14', 'Nandito', 'Orama', 'Prestagio', '1999-02-03', 'Bekasi', 'Laki-Laki', '25000000', '6'),
+('15', 'Quence', 'Rossario', 'Shawn', '1999-03-04', 'Jakarta', 'Laki-Laki', '10000000', '1');
+
+INSERT INTO dept_location (Department_Number, Department_Location) VALUES
+('1', 'Jakarta'), ('1', 'Bekasi'), ('1', 'Palembang'), ('1', 'Bali'), ('1', 'NTT'),
+('2', 'Jakarta'), ('2', 'Bekasi'), ('2', 'Palembang'),
+('3', 'Jakarta'), ('3', 'Bekasi'), ('3', 'Palembang'),
+('4', 'Jakarta'), ('4', 'Bekasi'),
+('5', 'Jakarta'), ('5', 'Bekasi'), ('5', 'Palembang'), ('5', 'Bali'),
+('6', 'Jakarta'), ('6', 'Bekasi'), ('6', 'Palembang'),
+('7', 'Jakarta'), ('7', 'Bekasi'), ('7', 'Palembang'),
+('8', 'Jakarta'), ('8', 'Bekasi');
+
+INSERT INTO dependent (SSN, Dependent_Name, Sex, Birthdate, Relationship) VALUES
+('1', 'Riyanto', 'Laki-Laki', '1997-01-01', 'Suami'),
+('2', 'Nabilah', 'Perempuan', '2000-02-02', 'Istri'),
+('2', 'Santri', 'Laki-Laki', '2007-01-01', 'Anak'),
+('2', 'Nyayu', 'Perempuan', '2009-01-01', 'Anak'),
+('8', 'Fany', 'Perempuan', '2000-08-08', 'Istri'),
+('8', 'Vinny', 'Perempuan', '2007-08-08', 'Anak'),
+('11', 'Vano', 'Laki-Laki', '1979-11-11', 'Orang Tua'),
+('12', 'Naruto', 'Laki-Laki', '1996-12-12', 'Suami'),
+('13', 'Korpal', 'Laki-Laki', '1979-01-02', 'Orang Tua'),
+('14', 'Nanda', 'Perempuan', '2005-02-03', 'Anak'),
+('15', 'Ambrosia', 'Perempuan', '2000-03-04', 'Istri'),
+('15', 'Nyx', 'Perempuan', '2007-03-04', 'Anak');
+
+INSERT INTO project (Project_Number, Project_Name, Project_Location, Department_Number) VALUES
+('1', 'BFI Tech Development Program', 'Anywhere', '1'),
+('2', 'BFI Vlog', 'Anywhere', '1'),
+('3', 'Technotalk', 'Jakarta', '4'),
+('4', 'Infotalk', 'Jakarta', '3'),
+('5', 'Rekreasi Kantor', 'Bali', '1'),
+('6', 'Design Planning Bootcamp', 'Anywhere', '6');
+
+INSERT INTO manager (Department_Number, SSN) VALUES
+('1', '11'),
+('2', '2'),
+('3', '4'),
+('4', '12'),
+('5', '5'),
+('6', '14'),
+('7', '10'),
+('8', '8');
+
+INSERT INTO works_on (SSN, Project_Number, Hours) VALUES
+('11', '1', '210'), ('1', '1', '210'), ('3', '1', '210'), ('9', '1', '210'), ('15', '1', '210'),
+('11', '2', '10'),
+('12', '3', '20'), ('6', '3', '20'),
+('3', '4', '20'),
+('11', '5', '50'), ('2', '5', '50'), ('4', '5', '50'), ('12', '5', '50'),
+('5', '5', '50'), ('14', '5', '50'), ('10', '5', '50'), ('8', '5', '50'),
+('14', '6', '40');
+
+INSERT INTO tabelc_lagumus (ID_Lagu, ID_Musisi) VALUES
+('1', '12'), ('1', '11'), ('1', '10'), ('1', '8'),
+('2', '12'), ('2', '11'), ('2', '10'), ('2', '8'),
+('3', '7'), ('3', '6'), ('3', '5'),
+('4', '7'), ('4', '6'), ('4', '5'),
+('5', '1'), ('5', '2'), ('5', '3'), ('5', '4'),
+('6', '1'), ('6', '2'), ('6', '3'), ('6', '4'),
+('7', '1'), ('7', '2'), ('7', '3'), ('7', '4'),
+('7', '5'), ('7', '6'), ('7', '7'), ('7', '8'),
+('7', '9'), ('7', '10'), ('7', '11'), ('7', '12'),
+('8', '1'), ('8', '2'), ('8', '3'), ('8', '4'),
+('8', '5'), ('8', '6'), ('8', '7'), ('8', '8'),
+('8', '9'), ('8', '10'), ('8', '11'), ('8', '12'),
+('9', '1'), ('9', '2'), ('9', '3'), ('9', '4'),
+('9', '5'), ('9', '6'), ('9', '7'), ('9', '8'),
+('9', '9'), ('9', '10'), ('9', '11'), ('9', '12'),
+('10', '1'), ('10', '2'), ('10', '3'), ('10', '4'),
+('10', '5'), ('10', '6'), ('10', '7'), ('10', '8'),
+('10', '9'), ('10', '10'), ('10', '11'), ('10', '12'),
+('11', '1'), ('11', '2'), ('11', '3'), ('11', '4'),
+('11', '5'), ('11', '6'), ('11', '7'), ('11', '8'),
+('11', '9'), ('11', '10'), ('11', '11'), ('11', '12'),
+('12', '1'), ('12', '2'), ('12', '3'), ('12', '4'),
+('12', '5'), ('12', '6'), ('12', '7'), ('12', '8'),
+('12', '9'), ('12', '10'), ('12', '11'), ('12', '12'),
+('13', '1'), ('13', '2'), ('13', '3'), ('13', '4'),
+('13', '5'), ('13', '6'), ('13', '7'), ('13', '8'),
+('13', '9'), ('13', '10'), ('13', '11'), ('13', '12');
+
+CREATE VIEW no_1
+AS SELECT First_Name, Middle_Name, Last_Name, Dependent_Name, Relationship
+FROM employee, dependent
+WHERE First_Name LIKE 'R%';
+
+CREATE VIEW no_2
+AS SELECT COUNT(Project_Number) AS Banyak_Employee
+FROM works_on
+WHERE Project_Number = 1;
+
+CREATE VIEW no_3
+AS SELECT COUNT(Salary) AS Banyak_Employee
+FROM employee
+WHERE Salary > 3500000;
+
+CREATE VIEW no_4
+AS SELECT COUNT(Department_Number) AS Banyak_Project
+FROM project
+WHERE Department_Number = 2;
+
+CREATE VIEW no_5
+AS SELECT a.Department_Number, Department_Name,
+          SUM(Salary) Total_Salary,
+          AVG(Salary) Average_Salary
+FROM department a, employee b
+WHERE a.Department_Number = b.Department_Number
+GROUP BY a.Department_Number;
+
+CREATE VIEW no_6
+AS SELECT a.Department_Number, Department_Name,
+          COUNT(b.Department_Number) AS Total_Employee
+FROM department a, employee b
+WHERE a.Department_Number = b.Department_Number
+GROUP BY a.Department_Number
+ORDER BY Total_Employee DESC;
+
+CREATE VIEW no_7
+AS SELECT a.SSN, First_Name, Middle_Name, Last_Name,
+          SUM(Hours) AS Total_Hours
+FROM employee a, works_on b
+WHERE a.SSN = b.SSN
+GROUP BY SSN;
+
+CREATE VIEW no_8
+AS SELECT *
+FROM no_7
+WHERE Total_Hours > 140
+ORDER BY Total_Hours DESC;
+
+CREATE VIEW no_9
+AS SELECT SSN, First_Name, Middle_Name, Last_Name, Total_Hours,
+          IF(Total_Hours >= 200, 50, IF(Total_Hours >= 150, 25, 10)) AS Percent_Bonus
+FROM no_7;
+
+CREATE VIEW no_10
+AS SELECT a.SSN, First_Name, Middle_Name, Last_Name,
+          COUNT(b.SSN) AS Total_Project
+FROM employee a, works_on b
+WHERE a.SSN = b.SSN
+GROUP BY a.SSN
+ORDER BY Total_Project DESC;
+
+CREATE VIEW no_11
+AS SELECT *
+FROM no_10
+WHERE Total_Project = 4;
+
+CREATE VIEW no_12
+AS SELECT a.SSN, a.First_Name, a.Middle_Name, a.Last_Name, a.Total_Hours, b.Total_Project
+FROM no_7 a, no_10 b
+WHERE a.SSN = b.SSN AND a.Total_Hours = 70 AND b.Total_Project = 2;
+
+CREATE VIEW no_13
+AS SELECT a.SSN, First_Name, Middle_Name, Last_Name,
+          COUNT(b.SSN) AS Total_Dependent
+FROM employee a, dependent b
+WHERE a.SSN = b.SSN
+GROUP BY a.SSN;
+
+CREATE VIEW no_14
+AS SELECT a.Department_Number, Department_Name, b.SSN, First_Name, Middle_Name, Last_Name,
+          DATEDIFF('2022-06-23', Manager_Startdate) AS Days_Occupied
+FROM department a, manager b, employee c
+WHERE a.Department_Number = b.Department_Number AND b.SSN = c.SSN;
+
+CREATE VIEW no_15a
+AS SELECT Department_Location,
+          COUNT(Department_Location) AS Total_Department
+FROM dept_location
+GROUP BY Department_Location;
+
+CREATE VIEW no_15b
+AS SELECT *
+FROM no_15a
+WHERE Total_Department > 1;

@@ -1,0 +1,43 @@
+Run di Command Prompt
+mvn exec:java -Dexec.mainClass="com.learning.sax.JavaReadXmlSaxEx"
+mvn exec:java -Dexec.mainClass="com.learning.sax.ParseKnownXMLStructure"
+mvn exec:java -Dexec.mainClass="com.learning.sax.ParsingXmlSax.module.Mail"
+
+mvn exec:java -Dexec.mainClass="com.learning.dom.ParseKnownXMLStructure"
+
+mvn exec:java -Dexec.mainClass="com.learning.challange.JavaReadXmlChallange"
+
+mvn exec:java -Dexec.mainClass="com.learning.alexa.ReadXmlAlexaApi"
+
+Digunakan sebagai cara cepat untuk running dan menampilkan data
+Alih-alih ada lifecycle error
+mvn exec:java -q
+
+Ternyata gak ngaruh ges
+Build Path -> Library -> JDK 17 ganti Alternate JDK 8
+
+Kalau males coba di VSCode bisa di Eclipse
+1. pom.xml
+--> Run as clean
+--> Run as install
+2. Folder
+--> Contoh: DemoSAX, DemoDOM
+--> Run as Java Application
+
+https://petstore.swagger.io/#/
+
+Keterangan SAX:
+1. MyHandler mengambil data
+<*> -> File getter setter java
+@Override pertama untuk baca data
+Disesuaikan dengan file resources xml nya
+if pertama untuk baca kolom pertama
+Contoh: <user id= *>
+
+2. MyRunner untuk akses file dan folder
+Ada file path di sini
+
+3. * untuk deklarasi objek resources xml
+Ada getter setter
+
+4. File utama untuk parsing dokumen

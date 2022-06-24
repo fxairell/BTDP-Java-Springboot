@@ -1,0 +1,38 @@
+Company Name : PT Melodi Indah
+Tujuan : Database Informasi Pemusik yang rekaman di perusahaan.
+
+Tabel Musisi:
+- ID Musisi
+- Nama
+- SSN (NIK atau Social Security Number)
+- Alamat
+- Nomor Telepon
+
+* Beberapa punya alamat yang sama (done)
+** Beberapa tidak mencantumkan alamat (done)
+
+Tabel Instrumen:
+- ID Instrumen
+- Nama Instrumen (Gitar, Flute, dll)
+- Kunci Musik (C, B#, dll)
+
+Tabel Album:
+- ID Album
+- Judul Album
+- Tanggal Copyright
+- Format (CD, DA, DS)
+- Produser
+
+Tabel Lagu:
+- ID Lagu
+- Judul Lagu
+- Album
+
+* Musisi mungkin memainkan beberapa instrumen (done)
+** Instrumen mungkin dimainkan beberapa musisi (done)
+*** Album mempunyai banyak lagu (lebih dari 1 lagu cukup) (done)
+**** Tidak ada lagu yang ada di banyak album (lagu hanya tampil tempat di 1 album) (done)
+***** Setiap lagu ditampilkan oleh satu atau lebih musisi (done)
+****** Setiap musisi bisa menampilkan lebih dari satu lagu (done)
+******* Setiap album mempunyai musisi sebagai produsernya (done)
+******** Seorang musisi mungkin memproduksi lebih dari satu album (done)

@@ -37,7 +37,7 @@ public class User {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(id).append(":").append(firstName).append(":")
-                .append(lastName).append(",");
+                .append(lastName).append("   ");
         
                 return builder.toString();
     }

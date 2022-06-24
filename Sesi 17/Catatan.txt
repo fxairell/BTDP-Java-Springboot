@@ -1,0 +1,15 @@
+Belajar 1
+
+Spring 2.7.0
+Java 17
+Dependency -> Spring Web
+
+Koding kaya di kode.id
+
+
+------------------------------
+Belajar 2
+
+Spring 2.7.0
+Java
+Dependency -> JPA, Conector Java

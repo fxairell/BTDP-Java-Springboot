@@ -1,0 +1,17 @@
+Catatan
+
+#menampilkan musisi dengan beberapa instrumen
+select tc.id_combine_musik, tm.nama_musisi, tm.alamat, 
+ti.nama_instrumen, ti.kunci_musik
+from tb_combine_musik tc
+join tb_musisi tm on tc.id_musisi = tm.id_musisi
+join tb_instrumen ti on ti.id_instrumen = tc.id_instrumen
+where tm.id_musisi=1
+
+#menampilkan instrumen dengan bbrp musisi
+select tc.id_combine_musik, ti.nama_instrumen, ti.kunci_musik, tm.nama_musisi, tm.alamat
+from tb_combine_musik tc
+join tb_musisi tm on tc.id_musisi = tm.id_musisi
+join tb_instrumen ti on ti.id_instrumen = tc.id_instrumen
+where tm.id_musisi=1 and ti.nama_instrumen='Biola'
+where ti.nama_instrumen='Biola'

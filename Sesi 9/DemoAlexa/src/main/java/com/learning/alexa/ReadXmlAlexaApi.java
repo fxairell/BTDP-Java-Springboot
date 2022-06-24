@@ -13,7 +13,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class ReadXmlAlexaApi {
-    private static final String ALEXA_API = "https://data.alexa.com/data?cli=10&url=hactive8.com";
+    private static final String ALEXA_API = "https://data.alexa.com/data?cli=10&url=";
     private final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
     public static void main(String[] args) {
