@@ -58,3 +58,14 @@ UNTUK RUNNING DI VSCODE
 mvn spring-boot:run
 
 Buka Postman
+
+--------------------
+Untuk buat landing page, pakai Controller
+Ngikutin Controller sebelumnya
+
+Jangan lupa css dan html nya
+Pakai Thymeleaf
+
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+HTML
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
