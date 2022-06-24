@@ -1,0 +1,7 @@
+Untuk final project bisa copy bagian pom dependency dan JST
+Ikutin strukturnya biar gampang, simple untuk OAUTH2
+
+Kita bisa pake Swagger V2
+Biasanya pada pake Swagger V3
+
+Jangan lupa response nya

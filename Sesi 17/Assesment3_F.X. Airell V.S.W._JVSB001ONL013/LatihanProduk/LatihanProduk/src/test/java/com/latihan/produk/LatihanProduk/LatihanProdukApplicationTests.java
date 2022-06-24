@@ -1,13 +1,13 @@
-package com.example.BelajarAPISQL;
+package com.latihan.produk.LatihanProduk;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class BelajarApisqlApplicationTests {
+class LatihanProdukApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
 	}
 
 }

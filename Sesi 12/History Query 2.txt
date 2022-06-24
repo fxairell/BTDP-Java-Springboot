@@ -188,7 +188,7 @@ GROUP BY a.SSN;
 
 CREATE VIEW no_14
 AS SELECT a.Department_Number, Department_Name, b.SSN, First_Name, Middle_Name, Last_Name,
-          DATEDIFF('2022-06-23', Manager_Startdate) AS Days_Occupied
+          DATEDIFF(CURDATE(), Manager_Startdate) AS Days_Occupied
 FROM department a, manager b, employee c
 WHERE a.Department_Number = b.Department_Number AND b.SSN = c.SSN;
 

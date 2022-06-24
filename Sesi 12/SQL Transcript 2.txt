@@ -268,7 +268,7 @@ DROP TABLE IF EXISTS `no_13`;
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `no_13` AS select `a`.`SSN` AS `SSN`,`a`.`First_Name` AS `First_Name`,`a`.`Middle_Name` AS `Middle_Name`,`a`.`Last_Name` AS `Last_Name`,count(`b`.`SSN`) AS `Total_Dependent` from (`employee` `a` join `dependent` `b`) where `a`.`SSN` = `b`.`SSN` group by `a`.`SSN`;
 
 DROP TABLE IF EXISTS `no_14`;
-CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `no_14` AS select `a`.`Department_Number` AS `Department_Number`,`a`.`Department_Name` AS `Department_Name`,`b`.`SSN` AS `SSN`,`c`.`First_Name` AS `First_Name`,`c`.`Middle_Name` AS `Middle_Name`,`c`.`Last_Name` AS `Last_Name`,to_days('2022-06-23') - to_days(`a`.`Manager_Startdate`) AS `Days_Occupied` from ((`department` `a` join `manager` `b`) join `employee` `c`) where `a`.`Department_Number` = `b`.`Department_Number` and `b`.`SSN` = `c`.`SSN`;
+CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `no_14` AS select `a`.`Department_Number` AS `Department_Number`,`a`.`Department_Name` AS `Department_Name`,`b`.`SSN` AS `SSN`,`c`.`First_Name` AS `First_Name`,`c`.`Middle_Name` AS `Middle_Name`,`c`.`Last_Name` AS `Last_Name`,to_days(CURDATE()) - to_days(`a`.`Manager_Startdate`) AS `Days_Occupied` from ((`department` `a` join `manager` `b`) join `employee` `c`) where `a`.`Department_Number` = `b`.`Department_Number` and `b`.`SSN` = `c`.`SSN`;
 
 DROP TABLE IF EXISTS `no_15a`;
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `no_15a` AS select `dept_location`.`Department_Location` AS `Department_Location`,count(`dept_location`.`Department_Location`) AS `Total_Department` from `dept_location` group by `dept_location`.`Department_Location`;

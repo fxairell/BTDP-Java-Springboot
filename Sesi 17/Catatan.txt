@@ -13,3 +13,48 @@ Belajar 2
 Spring 2.7.0
 Java
 Dependency -> JPA, Conector Java
+
+------------------------------
+Untuk assignment
+------------------------------
+<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+
+@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "hargaBeli")
+    private int hargaBeli;
+    
+    @Column(name = "hargaJual")
+    private int hargaJual;
+
+@Entity
+@Table(name = "t_product")
+@Data
+@ToString
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.spring.entity.Product;
+import com.example.spring.service.ProductService;
+
+import java.util.List;
+
+UNTUK RUNNING DI VSCODE
+mvn spring-boot:run
+
+Buka Postman
