@@ -54,5 +54,5 @@ j) BelajarApisqlApplication.java
 	File BelajarApisqlApplication.java merupakan file untuk aplikasi utama untuk menggunakan
 springboot dalam menampilkan beberapa pesan sederhana.
 k) BelajarApisqlApplicationTests.java
-	File BelajarApisqlApplicationTests.java merupakan file untuk untuk melakukan testing aplikasi
-utama saat dijalankan perintah clean, install, dan test.
+	File BelajarApisqlApplicationTests.java merupakan file untuk melakukan testing aplikasi utama saat
+dijalankan perintah clean, install, dan test.

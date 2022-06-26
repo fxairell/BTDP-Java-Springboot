@@ -3,13 +3,7 @@ package com.belajar.spring.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class Course {
@@ -33,7 +27,6 @@ public class Course {
 	private Set<Student> students = new HashSet<>();
 	
 	public Course() {
-		
 	}
 	
 	public Course(String title, int modules, double fee) {

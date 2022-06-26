@@ -3,6 +3,8 @@ package com.belajar.auth.BelajarAuthJWT.config;
 import java.io.IOException;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,11 +20,11 @@ import io.jsonwebtoken.ExpiredJwtException;
 @Component
 public class JWTRequestFilter extends OncePerRequestFilter {
     @Autowired
-    private JwtUserDetailService jwtUserDetailService;
+    private JWTUserDetailService jwtUserDetailService;
 
-    private final JwtToken jwtTokenUtil;
+    private final JWTToken jwtTokenUtil;
 
-    public JWTRequestFilter(JwtToken jwtTokenUtil) {
+    public JWTRequestFilter(JWTToken jwtTokenUtil) {
         this.jwtTokenUtil = jwtTokenUtil;
     }
 
