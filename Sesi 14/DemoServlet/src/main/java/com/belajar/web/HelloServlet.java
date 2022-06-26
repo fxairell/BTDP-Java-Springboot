@@ -7,9 +7,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Servlet implementation class HelloServlet
- */
 
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -36,5 +33,6 @@ public class HelloServlet extends HttpServlet {
         out.print("<h2>Selamat Belajar</h2>");
         out.print("</body></html>");
 	}
-
+	
 }
+

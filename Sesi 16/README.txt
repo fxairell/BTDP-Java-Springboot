@@ -1,17 +1,16 @@
 Disclaimer
-Perhatian file ini berisi tujuan dan isi dari seluruh file dengan ekstension java dan class yang
-terdapat pada Folder Sesi 16 bagian dari Back End Development with Java Springboot. Adapun
-penjelasan yang diberikan merupakan penjelasan singkat untuk setiap file. Beberapa file terdapat
-pada folder file di dalam folder lain.
+Perhatian file ini berisi tujuan dan isi dari seluruh file dengan ekstension java yang terdapat
+pada Folder Sesi 16 bagian dari Back End Development with Java Springboot. Adapun penjelasan yang
+diberikan merupakan penjelasan singkat untuk setiap file. Beberapa file terdapat pada folder file
+di dalam folder lain.
 
 1. Definisi
 a) File dengan ekstensi java merupakan file berisi coding dengan bahasa pemrograman Java.
-b) File dengan ekstensi class merupakan file hasil compile file dengan ekstensi Java.
-c) File dengan ekstensi xml merupakan file data dengan tag digunakan untuk menyimpan data.
-d) File dengan ekstensi html merupakan file data dengan tag digunakan untuk menampilkan data.
-e) File dengan ekstensi css merupakan file data dengan tag digunakan untuk merubah penampilan data.
-f) File dengan ekstensi sql merupakan file data query untuk manipulasi database.
-g) File dengan ekstensi properties merupakan file bawaan untuk pembentukan aplikasi yang dapat
+b) File dengan ekstensi xml merupakan file data dengan tag digunakan untuk menyimpan data.
+c) File dengan ekstensi html merupakan file data dengan tag digunakan untuk menampilkan data.
+d) File dengan ekstensi css merupakan file data dengan tag digunakan untuk merubah penampilan data.
+e) File dengan ekstensi sql merupakan file data query untuk manipulasi database.
+f) File dengan ekstensi properties merupakan file bawaan untuk pembentukan aplikasi yang dapat
    mengatur properti yang digunakan aplikasi untuk berkomunikasi.
 
 2. Daftar File
