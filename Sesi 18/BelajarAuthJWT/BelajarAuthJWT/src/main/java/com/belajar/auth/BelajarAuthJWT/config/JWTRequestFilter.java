@@ -10,17 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.belajar.auth.BelajarAuthJWT.service.JWTUserDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
 @Component
 public class JWTRequestFilter extends OncePerRequestFilter {
     @Autowired
-    private JWTUserDetailService jwtUserDetailService;
+    private JWTUserDetailsService jwtUserDetailService;
 
     private final JWTToken jwtTokenUtil;
 
@@ -41,7 +42,7 @@ public class JWTRequestFilter extends OncePerRequestFilter {
 
             try {
                 username = jwtTokenUtil.getUsernameFromToken(jwtToken);
-            } catch (IllegalAccessException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Unable to get JWT Token");
             } catch (ExpiredJwtException e) {
                 System.out.println("JWT Token has expired");
