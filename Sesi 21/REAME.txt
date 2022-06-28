@@ -1,0 +1,49 @@
+Disclaimer
+Perhatian file ini berisi tujuan dan isi dari seluruh file dengan ekstension java yang terdapat
+pada Folder Sesi 20 bagian dari Back End Development with Java Springboot. Adapun penjelasan yang
+diberikan merupakan penjelasan singkat untuk setiap file. Beberapa file terdapat pada folder file
+di dalam folder lain.
+
+1. Definisi
+a) File dengan ekstensi java merupakan file berisi coding dengan bahasa pemrograman Java.
+b) File dengan ekstensi xml merupakan file data dengan tag digunakan untuk menyimpan data.
+c) File dengan ekstensi properties merupakan file bawaan untuk pembentukan aplikasi yang dapat
+   mengatur properti yang digunakan aplikasi untuk berkomunikasi.
+d) File dengan ekstensi json merupakan file data dengan tag digunakan untuk menyimpan data dengan
+   susunan key-value.
+
+2. Daftar File
+- NoteController.java
+- None.java
+- FirebaseMessagingService.java
+- HelloJavaSpringFcmApplication.java
+- application.properties
+- firebase-service-account.json
+- HelloJavaSpringFcmApplicationTests.java
+- pom.xml
+
+3. Deskripsi File
+a) NoteController.java
+	File NoteController.java merupakan file controller menghubungkan tampilan dari notifikasi
+sederhana.
+b) Note.java
+	File ManagementController.java merupakan file model untuk menyatakan mana variabel apa. Model
+digunakan agar dapat terhubung dengan controller.
+c) FirebaseMessagingService.java
+	File FirebaseMessagingService.java merupakan file untuk membangun dan mengirimkan pesan dan topik
+menggunakan firebase.
+d) HelloJavaSpringFcmApplication.java
+	File HelloJavaSpringFcmApplication.java merupakan file untuk aplikasi utama untuk menggunakan
+springboot dalam menampilkan beberapa list produk sederhana.
+e) application.properties
+	File application.properties merupakan file penjelas dan karakteristik dari aplikasi. Properti
+aplikasi dijelaskan dalam hal berhubungan atau bertukar data dengan service lainnya.
+f) firebase-service-account.json
+	File firebase-service-account.json merupakan file berisi key-value service account firebase untuk
+membantu menjalankan firebase tanpa harus mengunjungi website.
+g) HelloJavaSpringFcmApplicationTests.java
+	File HelloJavaSpringFcmApplicationTests.java merupakan file untuk melakukan testing aplikasi utama
+saat dijalankan perintah clean, install, dan test.
+h) pom.xml
+	File pom.xml merupakan file profile Maven yang digunakan sebagai properti pada Maven. File ini
+menampilkan berbagai versi, properti, dan dependensi dari Maven dan aplikasi yang digunakan.

@@ -54,10 +54,10 @@ e) UserController.java
 	File UserController.java merupakan file controller menghubungkan pesan tampilan dengan view. View
 dalam modul ini merupakan landing page sederhana.
 f) Produk.java
-	File Produk.java merupakan model untuk menyatakan mana variabel apa. Model digunakan agar dapat
-terhubung dengan controller dan dapat diolah pada database.
+	File Produk.java merupakan file model untuk menyatakan mana variabel apa. Model digunakan agar
+dapat terhubung dengan controller dan dapat diolah pada database.
 g) User.java
-	File User.java merupakan model untuk menyatakan mana variabel apa. Model digunakan agar dapat
+	File User.java merupakan file model untuk menyatakan mana variabel apa. Model digunakan agar dapat
 terhubung dengan controller dan dapat diolah pada database.
 h) ProdukRepository.java
 	File ProdukRepository.java merupakan file untuk menyimpan database produk menggunakan JPA.
