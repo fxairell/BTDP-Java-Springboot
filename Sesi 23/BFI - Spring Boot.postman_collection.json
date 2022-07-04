@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "7691d540-bd98-484c-a648-ea067804e6a9",
+		"name": "BFI - Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Final Project",
+			"item": [
+				{
+					"name": "Agency Controller",
+					"item": [
+						{
+							"name": "GET Agency",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/agency/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"agency",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Agency",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"PJK\",\r\n  \"details\": \"Ini kantor pajak\",\r\n  \"name\": \"Kantor Pajak\",\r\n  \"owner\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/agency/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"agency",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Agency by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/agency/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"agency",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Agency by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/agency/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"agency",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Agency by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"USR\",\r\n  \"details\": \"Akun user 1\",\r\n  \"name\": \"Kantor Pusat\",\r\n  \"owner\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/agency/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"agency",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer"
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Authentication Controller",
+					"item": [
+						{
+							"name": "POST Authentication",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"password\": \"bypass\",\r\n  \"username\": \"johndoe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Controller",
+					"item": [
+						{
+							"name": "PUT Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"password\": \"alsobypass\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/user/password/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"password",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Signup",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"USR\",\r\n  \"details\": \"Akun user 2\",\r\n  \"email\": \"akuuser2@yuhuu.com\",\r\n  \"firstName\": \"Jacob\",\r\n  \"lastName\": \"Doe\",\r\n  \"mobileNumber\": \"123789\",\r\n  \"name\": \"Kantor Kematian\",\r\n  \"password\": \"bypass\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"jacobdoe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT User Data",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Jemama\",\r\n  \"lastName\": \"Doe\",\r\n  \"mobileNumber\": \"987321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/user/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bus Controller",
+					"item": [
+						{
+							"name": "GET Bus by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/bus/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"bus",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Bus by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"capacity\": 10,\r\n  \"code\": \"MDN\",\r\n  \"make\": \"5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/bus/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"bus",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stop Controller",
+					"item": [
+						{
+							"name": "GET Stop",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/stop/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"stop",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Stop",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"MDN\",\r\n  \"detail\": \"Palangtua-Medankota\",\r\n  \"id\": 6,\r\n  \"name\": \"Marisia\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/stop/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"stop",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip Controller",
+					"item": [
+						{
+							"name": "POST Trip",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agencyId\": 2,\r\n  \"busId\": 1,\r\n  \"destStopId\": 5,\r\n  \"fare\": 20000,\r\n  \"journeyTime\": 10,\r\n  \"sourceStopId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/trip/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"trip",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Trip",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/trip/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"trip",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,6 +1,6 @@
 Disclaimer
 Perhatian file ini berisi tujuan dan isi dari seluruh file dengan ekstension java yang terdapat
-pada Folder Sesi 20 bagian dari Back End Development with Java Springboot. Adapun penjelasan yang
+pada Folder Sesi 21 bagian dari Back End Development with Java Springboot. Adapun penjelasan yang
 diberikan merupakan penjelasan singkat untuk setiap file. Beberapa file terdapat pada folder file
 di dalam folder lain.
 

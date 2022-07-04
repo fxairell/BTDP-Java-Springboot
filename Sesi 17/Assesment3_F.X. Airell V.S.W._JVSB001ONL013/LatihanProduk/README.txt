@@ -6,7 +6,7 @@ penjelasan singkat untuk setiap file.
 
 Nama			: F.X. Airell Valerio Satrio Wibowo
 Kode Peserta	: JVSB001ONL013
-Link Github		:
+Link Github		: https://github.com/fxairell/BTDP-Java-Springboot
 Panduan Penggunaan Aplikasi :
 
 1. Definisi

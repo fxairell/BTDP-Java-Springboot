@@ -1,0 +1,30 @@
+Admin dapat akses aplikasi dari browser			DONE
+
+Signup								DONE
+Login (dan dapat Token JWT)					DONE
+
+List Semua Stop							DONE
+Search Trip antara Dua Stops					DONE
+Filter Search dengan Opsi Tanggal				NOT
+Book Ticket pada Schedule Keberangkatan Tertentu	NOT
+
+API
+localhost:8080								DONE
+
+localhost:8080/api							DONE
+
+localhost:8080/api/v1/user/signup (HTTP.POST)			DONE
+localhost:8080/api/auth (HTTP.POST)					DONE
+localhost:8080/api/v1/reservation/stops (HTTP.GET)		DONE
+localhost:8080/api/v1/reservation/tripbystops (HTTP.GET)	DONE
+localhost:8080/api/v1/reservation/tripschedules (HTTP.GET)	NOT
+localhost:8080/api/v1/reservation/bookticket (HTTP.POST)	NOT
+
+SWAGGER-UI
+Buka dengan localhost:8080/swagger-ui.html
+
+PERHATIAN
+1. Jangan error
+2. Push Github dan Heroku (Deployment)
+3. Copy link Github dan Heroku ke dokumen
+4. Jangan lupa dicoba

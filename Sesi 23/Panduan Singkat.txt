@@ -1,0 +1,12 @@
+1. Run as Clean (apabila ada update code di Java)
+2. Run as Install (apabila ada update code di Java)
+3. Run as SpringBoot Application
+
+Masuk ke browser
+localhost:8080/swagger-ui.html
+
+Pertama kali coba jalanin User Controller
+1. Sign Up
+2. Isi semua detail,
+Contoh pengisian role: ROLE_USER, ROLE_ADMIN
+3. Klik Try it out!

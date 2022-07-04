@@ -1,0 +1,17 @@
+Token sonarqube:
+Analyze "SpringHello": sqp_f868199ab6c425230d0bfff2b514fb1345e6f7c5
+
+mvn clean verify sonar:sonar \ -Dsonar.projectKey=SpringHello \ -Dsonar.host.url=http://localhost:9000 \ -Dsonar.login=sqp_f868199ab6c425230d0bfff2b514fb1345e6f7c5
+
+Ini adalah bukan panduan Sesi 22
+
+Bisa untuk di bagian service biar lebih bagus codenya
+
+List dataProduct = productrepository.findall()
+return dataproduct;
+try { }catch(exception e){ }
+
+Download sonarqube
+mvn sonar:sonar
+
+Run di terminal project locally

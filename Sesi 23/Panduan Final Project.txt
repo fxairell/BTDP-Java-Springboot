@@ -1,0 +1,164 @@
+Ini adalah panduan Final Project
+
+Projek sesuai dengan kebutuhan
+
+Framework Database
+--------------------
+2. Buat data tabel User --> [Model]
+id (user), email, password, firstName, lastName, mobileNumber, roles
+Roles -> kita buat sebuah tabel
+
+Sifatnya ManytoMany untuk antar tabel
+Caranya dengan,
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinTable(	name = "user_roles", 
+	joinColumns = @JoinColumn(name = "user_id"),
+	inverseJoinColumns = @JoinColumn(name = "role_id"))
+
+Karena roles itu berupa objek, jadi menggunakan set
+
+private Set<Role> roles = new HashSet<>();
+
+Beberapa user punya PT atau Agen Travel, jadi terhubung dengan tabel Agency
+
+--------------------
+1. Buat data tabel Role
+id (role), role
+Contoh pengisian data bisa int, string : 1, ADMIN
+Secara gak langsung buat data registrasi
+
+Rolenya cukup 2, USER dan ADMIN
+
+USER: Ticket - Trip Schedule - Trip - Stop
+	Trip Schedule - Bus - Agency
+ADMIN: User, Role, Agency, Bus
+
+--------------------
+3. Buat data tabel Agency
+id (agency), code, name, details, owner
+Owner -> terhubung dengan tabel User
+
+Sifatnya ManytoMany untuk antar tabel
+Caranya dengan,
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinColumn(name = "owner_user_id")		// name itu nama alias di database
+
+Agency ke Bus dibuat OnetoMany
+Bus berupa object bukan data list
+
+Contoh
+Agency 1 > PT Angkot Indonesia > Bali > detail > owner >
+data bus > 1, 2, 3, 4
+tujuan bus > berbeda"
+
+Caranya dengan,
+
+@OnetoMany(mappedBy = "Agency", cascade = CascadeType.ALL)
+private Set<Bus> buses = new HashSet<>();
+
+--------------------
+4. Buat data tabel Bus
+id (bus), code, capacity, make, agency
+
+Caranya dengan,
+
+@ManyToMany(fetch = FetchType.LAZY)		// Fungsinya ngeload collection yang ada di data
+@JoinColumn(name = "agency_id")
+
+Ini adalah cara tercepat,
+Nanti repot kalau dirapiin strukturnya semisal OnetoMany
+Caranya biar bisa dapetin banyak bus dari banyak agensi
+Jalan ke Trip dulu biar lebih ke arah ManytoMany
+
+Relasi itu penting
+Atau kalau sudah dijadiin satu tabel itu namanya collection
+
+Contoh deskripsi
+Code = KDT --> Kedaton
+Capacity = 25 --> Muatan 25 orang
+Make = 20 --> Dibatasin untuk tiap stop berapa orang
+		  Tidak boleh lebih dari capacity
+		  Istilahnya cap capcity per stop atau target cap each stop
+
+--------------------
+5. Buat data tabel Trip
+id (trip), fare, journeyTime, sourceStop, destStop, bus, agency
+Fokus tripnya adalah di skedul
+Trip mencari busnya jalan dari mana ke mana
+Bisa beda busnya bisa beda agency nya
+Relasinya ManytoMany
+
+Caranya dengan,
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinColumn(name = "source_stop_id")
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinColumn(name = "dest_stop_id")
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinColumn(name = "bus_id")
+
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinColumn(name = "agency_id")
+
+--------------------
+6. Buat data tabel TripSchedule
+id (trip schedule), tripDate, availableSeats, tripDetail, ticketsSold
+Trip Detail ambil data si Trip berdasarkan id
+Relasinya OnetoOne dan OnetoMany
+
+Caranya dengan,
+
+@OnetoOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "trip_id")
+// private Set<Trip Detail> trip_details = new HashSet<>();
+
+@OnetoMany(mappedBy = "Trip Schedule", cascade = CascadeType.ALL)
+// private Set<Ticket Sold> ticket_sold = new HashSet<>();
+
+--------------------
+7. Buat data tabel Ticket
+id (ticket), seatNumber, cancellable, journeyDate, passanger, tripSchedule
+Relasinya ManytoOne
+
+Caranya dengan,
+
+@ManytoOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "user_id")
+// private Set<Passenger> passenger = new HashSet<>();
+
+@ManytoOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "trip_schedule_id")
+// private Set<Trip Schedule> trip_schedule = new HashSet<>();
+
+--------------------
+Dependencies:
+- Spring Boot Project (PALING PENTING)
+- MySQL (PALING PENTING)
+- JWT (PALING PENTING)
+- Thymeleaf
+- Material (Optional)
+- Bootstrap
+- Swagger 2
+
+--------------------
+Sebelum dikirim, pastikan:
+1. Kode tidak ada error (PENTING BANGET)
+2. Sudah tercompile / generate source
+3. Push git (Panduan, sertakan screenshoot dan tata cara penggunaan,
+   copy postman (hasil uji test postman), penggunaan swagger)
+4. ZIP folder aplikasi java / eclipse, panduan
+   Panduan : Identitas (nama, nomor peserta), link github, link heroku,
+		 panduan penggunaan
+
+Optional:
+- Push ke heroku, bisa menggunakan free remote mysql (online) atau
+  menggunakan postgreesql
+
+--------------------
+Request - 4
+Impl - 1 (UserDetailsImpl)
+Model - 2 (GetterSetter + Construct)

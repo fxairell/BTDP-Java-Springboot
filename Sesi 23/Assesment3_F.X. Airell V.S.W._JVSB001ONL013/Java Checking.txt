@@ -1,0 +1,71 @@
+MAIN					DONE
+Final Project Bus Application	CHECK
+
+CONFIG				DONE
+Flyway Configuration		CHECK
+
+CONTROLLER				DONE
+Agency Controller			CHECK
+Auth Controller			CHECK
+Bus Controller			CHECK
+Stop Controller			CHECK
+Trip Controller			CHECK
+User Controller			CHECK
+
+MODELS				DONE
+Agency				CHECK
+Bus					CHECK
+ERole					CHECK
+Role					CHECK
+Stop					CHECK
+Ticket				CHECK
+Trip					CHECK
+TripSchedule			CHECK
+User					CHECK
+
+PAYLOAD REQUEST			DONE
+Agency Request			CHECK
+Bus Custom Request		CHECK
+Bus Request				CHECK
+Get Trip By Stop Request	CHECK
+Get Trip Schedule Request	CHECK
+Login Request			CHECK
+Sign Up Custom Request		CHECK
+Sign Up Request			CHECK
+Ticket Request			CHECK
+Trip Request			CHECK
+User Custom Request		CHECK
+User Password Request		CHECK
+
+PAYLOAD RESPONSE			DONE
+Message Response			CHECK
+JWT Response			CHECK
+
+REPOSITORY				DONE
+Agency Repository			CHECK
+Bus Repository			CHECK
+Role Repository			CHECK
+Stop Repository			CHECK
+Ticket Repository			CHECK
+Trip Repository			CHECK
+Trip Schedule Repository	CHECK
+User Repository			CHECK
+
+SECURITY				DONE
+Web Security Config		CHECK
+
+SECURITY JWT			DONE
+Auth Entry Point JWT		CHECK
+Auth Token Filter			CHECK
+JWT Utils				CHECK
+
+SECURITY SERVICES			DONE
+Users Details Impl		CHECK
+Users Details Service Impl	CHECK
+
+DB MIGRATION			DONE
+V1.0_insert_agency.sql		CHECK
+V1.1_insert_bus.sql		CHECK
+V1.2_insert_role.sql		CHECK
+V1.3_insert_stop.sql		CHECK
+V1.4_insert_trip.sql		CHECK
