@@ -10,3 +10,14 @@ Pertama kali coba jalanin User Controller
 2. Isi semua detail,
 Contoh pengisian role: ROLE_USER, ROLE_ADMIN
 3. Klik Try it out!
+
+Auth Controller
+1. Isi username dan password
+2. Klik Try it out!
+
+Authorize (menu paling atas ada di agak kanan)
+1. Copy Auth Token di Auth Controller response
+2. Masukan ke api Key format (Bearer Token)
+3. Authorize
+
+Bisa pilih menu dan masukkan sesuai input
