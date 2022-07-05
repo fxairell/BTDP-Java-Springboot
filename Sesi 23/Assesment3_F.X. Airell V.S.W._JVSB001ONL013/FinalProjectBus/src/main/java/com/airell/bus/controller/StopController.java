@@ -41,6 +41,18 @@ public class StopController {
 	public ResponseEntity<?> getAllStops() {
 		return ResponseEntity.ok(stopRepository.findAll());
 	}
+	
+	/*
+	 * Get Mapping shortcut baca data agar didefinisikan tambahan ./{id}
+	 * Api Operation mendeskripsikan method HTTP dan memerlukan Authorization
+	 * Pre Authorize mengecek apakah user punya role ADMIN
+	 */
+	@GetMapping("/{id}")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> getStopById(@PathVariable(value = "id") Long id) {
+		return ResponseEntity.ok(stopRepository.findById(id));
+	}
 
 	/*
 	 * Post Mapping shortcut buat data agar didefinisikan tambahan ./
@@ -53,5 +65,4 @@ public class StopController {
 	public ResponseEntity<?> addStop(@Valid @RequestBody Stop stop) {
 		return ResponseEntity.ok(stopRepository.save(stop));
 	}
-
 }

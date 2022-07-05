@@ -471,6 +471,111 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GET Bus",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/bus/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"bus",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Bus by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/bus/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"bus",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Bus by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"capacity\": 50,\r\n  \"code\": \"MLG01\",\r\n  \"make\": \"45\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/bus/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"bus",
+										"3"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -549,6 +654,38 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GET Stop by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/stop/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"stop",
+										"6"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -597,7 +734,7 @@
 							"response": []
 						},
 						{
-							"name": "GET Trip",
+							"name": "GET Trip by ID",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -623,6 +760,194 @@
 										"v1",
 										"trip",
 										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Trip",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/trip/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"trip",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ticket Controller",
+					"item": [
+						{
+							"name": "GET Ticket",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/ticket/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"ticket",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Ticket",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cancellable\": true,\r\n  \"journeyDate\": \"22/07/2022\",\r\n  \"passegerId\": 2,\r\n  \"seatNumber\": 10,\r\n  \"tripScheduleId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/ticket/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"ticket",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip Schedule Controller",
+					"item": [
+						{
+							"name": "GET Trip Schedule",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8060/api/v1/trip_schedule/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"trip_schedule",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Trip Schedule",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNjU2OTUyNDU5LCJleHAiOjE2NTcwMzg4NTl9.8WBREs9cqRoJBiec_IdZY39P57q9-2Jw5YgY_9R8hF4gN9Kj5A84Sa9Fu0ZSJLpVMJVALztxdKnD5ozgyYoE9A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"available_seats\": 10,\r\n  \"tripDate\": \"22/07/2022\",\r\n  \"trip_detail\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8060/api/v1/trip_schedule/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8060",
+									"path": [
+										"api",
+										"v1",
+										"trip_schedule",
+										""
 									]
 								}
 							},
